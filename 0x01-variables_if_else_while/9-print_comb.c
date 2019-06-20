@@ -1,22 +1,31 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
+
+
 /**
- * main - Numbers separated
+ * main - separate
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-char t[10] = "0123456789";
-int i;
+int m;
 
-for (i = 0; i < 10; i++)
+m = 48;
+while  (m < 58)
 {
-putchar(t[i]);
-if (i != 9)
+putchar(m);
+if (m !=  57)
 {
 putchar(',');
 putchar(' ');
+m++;
+}
+else
+{
+m++;
 }
 }
 putchar('\n');
