@@ -1,13 +1,13 @@
-#include <stdio.h>
 #include <unistd.h>
 /**
  * main - Entry point
- * Description: Write a C program that prints
- * Return: 1
+ *
+ * Return: Always 1 (Success)
  */
 int main(void)
 {
-int mao = sizeof("and that piece of art is useful - Dora Korpar, 2015-10-19");
-write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", mao);
-return (1);
+  char str1[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+  write(2, str1, 59);
+  return (1);
 }
