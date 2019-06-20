@@ -1,17 +1,18 @@
 #include <stdio.h>
 /**
- * main - For Practice
+ * main - While Practice
  *
  * Return: 0
  */
 
 int main(void)
 {
-char t[10] = "0123456789";
-int i;
-for (i = 0; i < 10; i++)
+int s;
+s = '0';
+while (s <= '9')
 {
-putchar(t[i]);
+putchar(s);
+s++;
 }
 putchar('\n');
 return (0);
