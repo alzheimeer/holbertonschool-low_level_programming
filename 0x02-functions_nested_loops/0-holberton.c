@@ -6,12 +6,12 @@
 int main(void)
 {
 	int i = 0;
-	char t, p[] = "Holberton\n";
+	char p[] = "Holberton\n";
 
 	while (i <= 9)
 	{
-		t = p[i];
-		_putchar(t);
+
+		_putchar(p[i]);
 		i++;
 	}
 	return (0);
