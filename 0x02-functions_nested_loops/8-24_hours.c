@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * jack_bauer
+ * jack_bauer - holbertonschool-low_level_programming
  *
- *
+ * Return: 0;
  */
 
 void jack_bauer(void)
