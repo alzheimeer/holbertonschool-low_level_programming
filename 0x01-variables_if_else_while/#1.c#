@@ -1,0 +1,24 @@
+#include <stdio.h>
+/**
+ * main - While Practice
+ *
+ * Return: 0
+ */
+
+int main(void)
+{
+  int s, o;
+  s ='0';
+  for(s='0'; s<= '9'; s++)
+    {
+      for(o='0'; o<='9'; o++)
+	{
+      putchar(o);
+      if(s!='9')
+	putchar(',');
+      putchar(' ');
+	}
+    }
+  putchar('\n');
+  return (0);
+}

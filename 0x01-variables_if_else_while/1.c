@@ -1,0 +1,43 @@
+#include <stdio.h>
+/**
+ * main - While Practice
+ *
+ * Return: 0
+ */
+
+int main(void)
+{
+  int s, o, x, m, p1, p2;
+  s ='0';
+  for(s='0'; s<= '9'; s++)
+    {
+      for(o='0'; o<='9'; o++)
+	{
+	  for(x='0'; x<='9'; x++)
+	    {
+	      for(m='0'; m<='9'; m++)
+		{
+		  p2=(x*10)+m;
+		  p1=(s*10)+o;
+		  
+		  if(p1<p2)
+		    {
+		  putchar(s);
+		  putchar(o);
+		  putchar(' ');
+		  putchar(x);
+		  putchar(m);
+		  
+		  if(o<'8' || s<'9' || x<'7'||m<'6')
+		    {
+		      putchar(',');
+		      putchar(' ');
+		    }
+	  }
+	  }
+	    }
+	}
+    }
+  putchar('\n');
+  return (0);
+}
