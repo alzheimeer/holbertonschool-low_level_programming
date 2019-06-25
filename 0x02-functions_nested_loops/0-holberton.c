@@ -5,15 +5,14 @@
  */
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
-	_putchar('\n');
+	int i = 0;
+	char t, p[] = "Holberton\n";
+
+	while (i <= 9)
+	{
+		t = p[i];
+		_putchar(t);
+		i++;
+	}
 	return (0);
 }
