@@ -15,7 +15,6 @@ int main(void)
 
 	printf("%.0f, ", a);
 	printf("%.0f, ", b);
-
 	while (count <= 98)
 	{
 		c = a + b;
@@ -23,10 +22,10 @@ int main(void)
 		if (count < 98)
 		{
 			printf(", ");
-			a = b;
-			b = c;
-			count++;
 		}
+		a = b;
+		b = c;
+			count++;
 	}
 	printf("\n");
 	return (0);
