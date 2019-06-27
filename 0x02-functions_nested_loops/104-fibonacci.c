@@ -5,6 +5,7 @@
  *
  * Return: 0;
  */
+
 int main(void)
 {
 	int count = 3;
@@ -20,10 +21,12 @@ int main(void)
 		c = a + b;
 		printf("%.0f", c);
 		if (count < 98)
+		{
 			printf(", ");
-		a = b;
-		b = c;
-		count++;
+			a = b;
+			b = c;
+			count++;
+		}
 	}
 	printf("\n");
 	return (0);
