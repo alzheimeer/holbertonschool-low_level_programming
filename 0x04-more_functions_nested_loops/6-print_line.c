@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_line - prints straight line n times.
+ * print_line - prints spaces n times
  * @n: value to use.
  * Return: no
  */
@@ -12,7 +12,7 @@ void print_line(int n)
 
 	for (x = 0; x < n; x++)
 	{
-		_putchar(' ');
+		_putchar(95);
 	}
 	_putchar('\n');
 }
