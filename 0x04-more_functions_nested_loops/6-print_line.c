@@ -2,7 +2,7 @@
 
 /**
  * print_line - prints straight line n times.
- * @n: times straight line is printed.
+ * @n: value to use.
  * Return: no
  */
 
@@ -15,5 +15,4 @@ void print_line(int n)
 		_putchar(' ');
 	}
 	_putchar('\n');
-
 }
