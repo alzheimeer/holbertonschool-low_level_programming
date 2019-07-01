@@ -2,22 +2,21 @@
 
 /**
  * main - prime factor of 612852475143
- * Return: Always 0.
+ * Return: 0
  */
 
 int main(void)
 {
-	int long n, d;
+	long i;
+	long n = 612852475143;
 
-	n = 612852475143;
-	for (d = 2; d <= n; d++)
+	for (i = 2; n > i; i++)
 	{
-		if (n % d == 0)
+		while (n % i == 0)
 		{
-			n /= d;
-			d--;
+			n = n / i;
 		}
 	}
-	printf("%ld\n", d);
+	printf("%ld\n", i);
 	return (0);
 }
