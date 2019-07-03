@@ -13,7 +13,7 @@ int main(void)
 	int c;
 	int x;
 
-	srand(time(NULL));
+	rand(time(NULL));
 	for (c = 0, x = 2772; x > 122; c++)
 	{
 		rand = (rand() % 125) + 1;
