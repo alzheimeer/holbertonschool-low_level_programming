@@ -1,26 +1,25 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
- * main - crackme
+ * main - crack
  *
  * Return: 0
  */
 int main(void)
 {
-	int rand;
-	int c;
-	int x;
+	int rch, b = 0;
 
-	rand(time(NULL));
-	for (c = 0, x = 2772; x > 122; c++)
+	srand(time(0));
+	while (b < 2772 - 127)
 	{
-		rand = (rand() % 125) + 1;
-		printf("%c", rand);
-		x -= rand;
+		rch = rand() % 127;
+		if (rch > 32)
+		{
+			putchar(rch);
+			b = b + rch;
+		}
 	}
-	printf("%c", x);
-
+	putchar(2772 - b);
 	return (0);
 }
