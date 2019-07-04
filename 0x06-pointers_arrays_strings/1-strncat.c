@@ -6,7 +6,7 @@
  * @src: The second string that receives
  * @n: The number of char that prints
  *
- * Return: 
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {

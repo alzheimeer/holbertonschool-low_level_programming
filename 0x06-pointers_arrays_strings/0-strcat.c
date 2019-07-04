@@ -3,9 +3,9 @@
 /**
  * *_strcat - Concat two strings
  * @dest: The string that receives
- * @src: 2 string 
- * Return: On success 1.
- * */
+ * @src: 2 string
+ * Return: dest
+ **/
 char *_strcat(char *dest, char *src)
 {
 	int i = 0, j = 0;
