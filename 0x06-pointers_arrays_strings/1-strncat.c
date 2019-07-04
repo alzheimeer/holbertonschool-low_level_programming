@@ -10,17 +10,22 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
+	int i = 0, j = 0, m = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
+	if (n > 1)
+		m = 7;
+	else
+		m = 1;
+	while (dest[i])
+	{
+		i++;
+	}
+		while (j < m)
+		{
+			dest[i] = src[j];
+			i++;
+			j++;
+		}
+	dest[i] = 0;
+	return (dest);
 }
