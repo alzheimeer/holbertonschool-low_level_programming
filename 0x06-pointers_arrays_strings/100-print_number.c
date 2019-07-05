@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * print_number - prints an integer.
+ * @n: input
+ * Return: multiples print
+ */
+
 void print_number(int n)
 {
 	unsigned int m, d, c;
