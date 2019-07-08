@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "holberton.h"
 
 /**
  * *_strspn - Function that return the number that coincide two strings
