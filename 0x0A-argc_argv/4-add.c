@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -7,28 +6,19 @@
  * @argv: array containing the program command line arguments
  * Return: 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int sum = 0, i;
+	int i, sum = 0;
 
-	if (argc == 0 || argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-	}
-	if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
+		if (!atoi(argv[i]))
 		{
-			if (!atoi(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			sum += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-	printf("%d\n", sum);
+		sum += atoi(argv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
-
 }
