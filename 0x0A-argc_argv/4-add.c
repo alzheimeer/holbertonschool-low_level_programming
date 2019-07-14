@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 		if (*argv[i] == 48)
 		{
 		}
-		else if (!atoi(argv[i]))
+		else if (!atoi(argv[i]) || (atoi(argv[i]) < 0))
 		{
 			printf("Error\n");
 			return (1);
