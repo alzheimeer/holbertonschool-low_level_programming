@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - prints add all arguments
- * @argc: number of command line arguments
- * @argv: array containing the program command line arguments
- * Return: 0.
+ * main - adds + numbers.
+ * @argc: number of command line arguments.
+ * @argv: array arguments.
+ * Return: 0 - 1.
  */
 int main(int argc, char *argv[])
 {
-	int i, j, sum = 0;
+	int i, j, add = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		sum += atoi(argv[i]);
+		add += atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
