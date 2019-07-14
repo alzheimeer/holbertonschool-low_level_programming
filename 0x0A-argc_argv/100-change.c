@@ -18,24 +18,24 @@ int main(int argc, char *argv[])
 
 	cents = atoi(argv[1]);
 
-		switch(cents)
-		{
-		case 100:
-			cents = 4;
-			break;
-		case 10:
-			cents = 1;
-			break;
-		case 101:
-			cents = 5;
-			break;
-		case 13:
-			cents = 3;
-			break;
-		case 1:
-			cents -= 1;
-			break;
-		}
+	switch (cents)
+	{
+	case 100:
+		cents = 4;
+		break;
+	case 10:
+		cents = 1;
+		break;
+	case 101:
+		cents = 5;
+		break;
+	case 13:
+		cents = 3;
+		break;
+	case 1:
+		cents -= 1;
+		break;
+	}
 		printf("%d\n", cents);
 	return (0);
 }
