@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents;
+	int cents, change = 0;
 
 	if (argc == 1 || argc > 2)
 	{
@@ -18,24 +18,20 @@ int main(int argc, char *argv[])
 
 	cents = atoi(argv[1]);
 
-	switch (cents)
+	while (cents > 0)
 	{
-	case 100:
-		cents = 4;
-		break;
-	case 10:
-		cents = 1;
-		break;
-	case 101:
-		cents = 5;
-		break;
-	case 13:
-		cents = 3;
-		break;
-	case 1:
-		cents -= 1;
-		break;
+		if (cents >= 25)
+			cents -= 25;
+		else if (cents >= 10)
+			cents -= 10;
+		else if (cents >= 5)
+			cents -= 5;
+		else if (cents >= 2)
+			cents -= 2;
+		else if (cents >= 1)
+			cents -= 1;
+		change += 1;
 	}
-		printf("%d\n", cents);
+	printf("%d\n", change);
 	return (0);
 }
