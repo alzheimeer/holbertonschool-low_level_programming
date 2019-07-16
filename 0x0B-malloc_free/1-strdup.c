@@ -15,12 +15,20 @@ char *_strdup(char *str)
 {
 	char *p;
 
+	if (str == NULL)
+		return (NULL);
+
 	p = malloc(_strlen(str) + 1);
-	if (p == NULL || str == NULL)
+
+	if (p == NULL)
 		return (NULL);
 	_strcpy(p, str);
 	return (p);
 }
+
+
+
+
 
 /**
  * _strcpy - copies the string pointed to by src,
