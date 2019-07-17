@@ -1,29 +1,50 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * strtow - splits a string into words
- * @str: argument for the function
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
  *
- * Return: Nothing.
+ * Return: no return
+ */
+void free_grid(int **grid, int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		while (height >= 0)
+		{
+			free(grid[height]);
+			height--;
+		}
+		free(grid);
+	}
+}
+
+/**
+ * strtow - splits a string into words.
+ * @str: string.
+ *
+ * Return: pointer of an array of integers
  */
 char **strtow(char *str)
 {
-	int i = 0, j = 0, number = 0;
-	char *s;
-	int size = 0;
+	char **arr;
+	unsigned int c, height, i, j, a1;
 
-	for (i = o; str[i] != '\0'; i++)
+	if (str == NULL || *str == '\0')
+		return (NULL);
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			height++;
+	arr = malloc((height + 1) * sizeof(char *));
+	if (arr == NULL || height == 0)
 	{
-		if (str[i] != 10 && str[i - 1] == 10)
-			number++;
+		free(arr);
+		return (NULL);
 	}
-	s = malloc(number * sizeof(char));
-	for (i = 0; i < size; i++)
-	{
-		s[i] = malloc(sizeof(char));
-	}
-	s[i] = '\0';
-	return (s);
+
+}
+arr[i] = NULL;
+return (arr);
 }
