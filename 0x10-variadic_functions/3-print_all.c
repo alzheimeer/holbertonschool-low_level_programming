@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	char *separator = "";
-	int j = 0, i = 0;
+	int j, i = 0;
 	abc funcs[] = {
 		{"c", cx},
 		{"i", dx},
@@ -21,14 +21,12 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-	while (format && (*(format + i)))
+	while (format[i])
 	{
-		while (j < 4 && (*(format + i) != *(funcs[j].s)))
+		j = 0;
+
+		while (j < 4 && format[i] != *(funcs[j].s))
 			j++;
-
-
-
-
 		if (j < 4)
 		{
 			printf("%s", separator);
@@ -50,6 +48,9 @@ void cx(va_list arg)
 {
 	printf("%c", (char) va_arg(arg, int));
 }
+
+
+
 /**
  * dx - Prints a integer.
  * @arg: A list pointing to int to print.
@@ -60,6 +61,10 @@ void dx(va_list arg)
 	printf("%d", va_arg(arg, int));
 }
 
+
+
+
+
 /**
  * fx - Prints a float.
  * @arg: A list pointing to float to print.
@@ -68,6 +73,10 @@ void fx(va_list arg)
 {
 	printf("%f", (float)va_arg(arg, double));
 }
+
+
+
+
 /**
  * sx - Prints a string.
  * @arg: A list pointing to string to print.
@@ -75,7 +84,7 @@ void fx(va_list arg)
 
 void sx(va_list arg)
 {
-	char *p = va_arg(arg, char *)
+	char *p = va_arg(arg, char *);
 
 	if (p == NULL)
 	{
@@ -83,6 +92,5 @@ void sx(va_list arg)
 		return;
 	}
 	printf("%s", p);
-
 	printf("\n");
 }
