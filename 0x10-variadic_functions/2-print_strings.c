@@ -14,6 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list m;
 	int i = 0;
 	char *s;
+
 	if (n < 1)
 	{
 		printf("\n");
