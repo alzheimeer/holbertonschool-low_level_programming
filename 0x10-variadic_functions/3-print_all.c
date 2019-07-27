@@ -92,5 +92,4 @@ void sx(va_list arg)
 		return;
 	}
 	printf("%s", p);
-	printf("\n");
 }
