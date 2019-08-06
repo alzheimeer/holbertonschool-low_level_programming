@@ -7,17 +7,13 @@
  * @n: data node
  * Return: the address of the new node, or NULL if it failed
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new = NULL;
-	listint_t *aux = NULL;
-	listint_t *dlt = NULL;
-	unsigned int a;
+	listint_t *new, *aux, *dlt;
+	unsigned int a = 0;
 
-	a = 0;
 	new = malloc(sizeof(listint_t));
-	if (new == NULL || head = NULL)
+	if (new == NULL)
 	{
 		return (NULL);
 	}
