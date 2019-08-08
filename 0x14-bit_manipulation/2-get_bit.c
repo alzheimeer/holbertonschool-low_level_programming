@@ -18,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		b[i] = 0;
 	}
 	i = 0;
-	if (n == '\0')
+	if (index > 63)
 		return (-1);
 	while (sup >= 0)
 	{
