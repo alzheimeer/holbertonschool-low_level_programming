@@ -7,12 +7,13 @@
  */
 void print_binary(unsigned long int n)
 {
-	int sup = 8 * sizeof(int);
+	int sup = 63;
 	int j = 0;
+	long int a = 1;
 
 	while (sup >= 0)
 	{
-		if (n & (((long int)1) << sup))
+		if (n & a << sup)
 		{
 			j = 1;
 			_putchar(49);
