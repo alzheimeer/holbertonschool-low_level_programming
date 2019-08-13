@@ -1,39 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <stddef.h>
-#include <string.h>
+#include <fcntl.h>
+#include <fcntl.h>
 #include "holberton.h"
+#include <unistd.h>
 
 /**
- * read_textfile - read text file
- * @filename: name of file
- * @letters: number of letters
- * Return: length
+ * read_textfile - returns the actual number of letters
+ * @filename: file to read and print
+ * @letters: number of letters to print
+ * Return: the number or letters
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int filedescripter;
-	int length = 0;
-	char buffer[letters];
 
-	if (!filename)
+	int fd, length;
+	char *buf;
+
+	if (filename == NULL)
 		return (0);
-
-	filedescripter = open(filename, O_RDONLY);
-
-	if (filedescripter == -1)
+	buf = malloc(letters * sizeof(char));
+	if (buf == NULL)
 		return (0);
-
-	length = read(filedescripter, buffer, letters);
-
-
-	length = (write(STDOUT_FILENO, buffer, length));
-
-	close(filedescripter);
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	length = write(STDOUT_FILENO, buf, read(fd, buf, letters));
+	if (length == -1)
+		return (0);
+	close(fd);
+	free(buf);
 	return (length);
+
+
 }
