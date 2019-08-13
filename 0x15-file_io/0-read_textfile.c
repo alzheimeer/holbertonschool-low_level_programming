@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <fcntl.h>
 #include "holberton.h"
-#include <unistd.h>
 
 /**
  * read_textfile - returns the actual number of letters
