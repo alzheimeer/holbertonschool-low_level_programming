@@ -7,8 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd, fd2, l2;
-	ssize_t l1 = 1024;
+	int fd, fd2, l2, l1 = 1024;
 	char buf[1024];
 
 	if (argc != 3)
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98); }
-	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
