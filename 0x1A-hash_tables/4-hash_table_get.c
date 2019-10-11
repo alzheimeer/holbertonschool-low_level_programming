@@ -18,8 +18,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (aux)
 	{
 		if (strcmp(key, aux->key) == 0)
-			return(aux->value);
+			return (aux->value);
 		aux = aux->next;
 	}
-	return(0);
+	return (0);
 }
