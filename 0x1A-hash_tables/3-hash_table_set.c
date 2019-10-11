@@ -21,8 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new_node->value = strdup(value);
 	new_node->key = strdup(key);
-	head = ht->array[index];
 	index = key_index((const unsigned char *)key, ht->size);
+	head = ht->array[index];
 	while (head != NULL)
 	{
 		if (strcmp(head->key, key) == 0)
