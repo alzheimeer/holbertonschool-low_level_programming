@@ -23,22 +23,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = strdup(key);
 	index = key_index((const unsigned char *)key, ht->size);
 	head = ht->array[index];
-	if (head == NULL)
+	if (head)
 	{
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
+		while (strcmp(head->key, key) != 0)
+			head = head->next;
+		free(head->value);
+		head->value = strdup(value);
 		return (1);
 	}
-	while (head != NULL)
-	{
-		if (strcmp(head->key, key) == 0)
-		{
-			free(head->value);
-			head->value = strdup(value);
-			return (1);
-
-		}
-		head = head->next;
-	}
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 	return (1);
 }
