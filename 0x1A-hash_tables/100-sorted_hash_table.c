@@ -9,7 +9,7 @@
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *hash_table = NULL;
-        unsigned long int i;
+	unsigned long int i;
 
 	if (size < 1)
 		return (NULL);
@@ -46,7 +46,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	shash_node_t *new_node = NULL, *aux;
 	unsigned long int index = 0;
 
-        if (!ht || !key || !*key || !value)
+	if (!ht || !key || !*key || !value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	aux = ht->array[index];
