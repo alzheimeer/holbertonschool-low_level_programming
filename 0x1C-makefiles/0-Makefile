@@ -1,3 +1,2 @@
-#first makefile
 program : main.c holberton.c m.h
 	gcc main.c holberton.c -o holberton
